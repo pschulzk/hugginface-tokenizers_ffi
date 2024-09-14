@@ -1,0 +1,16 @@
+[package]
+name = "tokenizers_ffi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "tokenizers_ffi"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+tokenizers = "0.13.2"
+once_cell = "1.17.1"
+openssl = { version = "0.10", features = ["vendored"] }
+
+[build-dependencies]
+openssl-src = "111"
